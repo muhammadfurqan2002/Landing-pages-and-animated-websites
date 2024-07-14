@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
+    <title></title>
+</head>
+
+<body>
+    <div class="container"
+        style="list-style: none;display: flex;align-items: center;justify-content: space-between;background-color: cadetblue;">
+
+        <span>Icons</span>
+        <nav  style="display: flex;align-items: center;">
+            <ul class="nav" >
+                <li style="margin: 0px 40px">Home</li>
+                <li style="margin: 0px 40px">Services</li>
+                <li style="margin: 0px 40px">Blog</li>
+                <li style="margin: 0px 40px">Contact</li>
+            </ul>
+            <li class="cross">X</li>
+        </nav>
+        <!-- <img src="" alt=""> -->
+    </div>
+    <script>
+        const id=document.getElementsByClassName('cross')[0];
+        const div=document.getElementsByClassName('nav')[0]
+        id.addEventListener("click",(e)=>{
+            e.preventDefault();
+            id.innerHTML='🔃'
+            div.classList.add('new_nav')
+            div.classList.remove('nav')
+        })
+    </script>
+</body>
+<style>
+    li {
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 5px;
+        color: black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    li:hover {
+        cursor: pointer;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #eddfdf;
+        font-weight: 400;
+        background-color: rgba(235, 249, 245, 0.265);
+    }
+</style>
+
+</html>
